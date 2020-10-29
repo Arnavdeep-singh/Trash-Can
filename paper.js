@@ -7,6 +7,7 @@ class Ball {
       }
       this.body = Bodies.circle(x, y, radius, options, 35);
       this.radius = radius;
+      this.Ball = loadImage('paper.png');
       
       World.add(world, this.body);
     }
@@ -16,11 +17,16 @@ class Ball {
       push();
       translate(pos.x,pos.y);
       rotate(angle);
-      ellipseMode(RADIUS);
-      fill(97,152,162);
-      strokeWeight(0);
-      ellipse(0,0, this.radius);
+      
+      imageMode(CENTER);
+      image(this.Ball, 0, 0, 70, 70);
+
+      // ellipseMode(RADIUS);
+      // fill(97,152,162);
+      // strokeWeight(0);
+      // ellipse(0,0, this.radius);
       pop();
+
     }
   }
   

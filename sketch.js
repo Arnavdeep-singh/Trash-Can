@@ -19,9 +19,9 @@ function setup() {
 	//Create the Bodies Here.
 	
 	smolball = new Ball(100,400,20);
-	right = new Box(790,430,10,80);
-	bottom = new Box(720,470,150,10);
-	left = new Box(640,435,10,80);
+	right = new Box(760,430,10,80);
+	bottom = new Box1(720,470,150,10);
+	left = new Box(680,435,10,80);
 
 	floor = new Ground(width/2,500,width,50);
 
@@ -38,16 +38,16 @@ function draw() {
   drawSprites();
   
   smolball.display();
-  right.display();
-  bottom.display()
+  right.display();  
   left.display();
+  bottom.display()
   floor.display();
  
 }
 
 function keyPressed(){
 	if (keyCode=== UP_ARROW){
-		Matter.Body.applyForce(smolball.body,smolball.body.position,{x:52,y:-52})
+		Matter.Body.applyForce(smolball.body,smolball.body.position,{x:55,y:-52})
 	}
 }
 
